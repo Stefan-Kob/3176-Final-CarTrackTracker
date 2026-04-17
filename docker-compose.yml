@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  carservice:
+    build: ./CarService
+    ports:
+      - "5036:8080"
+
+  trackservice:
+    build: ./TrackService
+    ports:
+      - "5176:8080"
+    depends_on:
+      - carservice
+    environment:
+      - CarServiceUrl=http://carservice:8080/

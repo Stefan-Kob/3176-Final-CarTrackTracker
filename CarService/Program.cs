@@ -3,6 +3,9 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// For render.com
+builder.WebHost.UseUrls("http://0.0.0.0:8080");
+
 // Add services to the container.
 builder.Services.AddDbContext<CarDbContext>(opt =>
     opt.UseInMemoryDatabase("CarDb"));
@@ -20,8 +23,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseHttpsRedirection();
 
 app.MapControllers();
 
