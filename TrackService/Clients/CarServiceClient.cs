@@ -1,4 +1,4 @@
-namespace Client.Client;
+namespace TrackService.Clients;
 
 // Car service client to check if a car exists in the database
 public class CarServiceClient

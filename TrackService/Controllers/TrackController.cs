@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TrackService.Data;
 using TrackService.Models;
+using TrackService.Clients;
 
 // Controller for managing track sessions
 [ApiController]
