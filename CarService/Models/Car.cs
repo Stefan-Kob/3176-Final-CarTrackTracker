@@ -1,4 +1,5 @@
 // Car class representing a car entity
+namespace CarService.Models;
 public class Car
 {
     public int Id { get; set; }
