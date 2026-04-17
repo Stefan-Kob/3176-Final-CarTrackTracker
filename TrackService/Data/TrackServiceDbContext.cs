@@ -1,6 +1,6 @@
 namespace TrackService.Data;
 using Microsoft.EntityFrameworkCore;
-using CarService.Models;
+using TrackService.Models;
 
 // TrackServiceDbContext database for TrackService
 public class TrackServiceDbContext : DbContext
