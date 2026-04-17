@@ -20,7 +20,15 @@ public class TrackController : ControllerBase
         _carClient = carClient;
     }
 
-    // Get all track sessions
+    // Returns all the track sessions
+    [HttpGet]
+    public async Task<IActionResult> GetAll()
+    {
+        var sessions = await _context.TrackSessions.ToListAsync();
+        return Ok(sessions);
+    }
+
+    // Calls the other service to check if the car exists before creating a track session
     [HttpPost]
     public async Task<IActionResult> CreateSession(TrackSession session)
     {
